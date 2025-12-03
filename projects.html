@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets – Leslie Essong Ewane</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner wrapper">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">LE</span>
+      <span class="logo-text">Développeur web</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link">À propos</a>
+      <a href="projects.html" class="nav-link nav-link--active">Projets</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrapper">
+  <section style="padding-block: 4.5rem 3.5rem;">
+    <h1 class="section-title">Mes projets</h1>
+
+    <div class="section-intro">
+      Une sélection de projets de développement web et de design (UI) réalisés pour mettre en pratique mes compétences en front‑end, intégration responsive et maquettage. Chaque projet peut être exploré en détail.
+    </div>
+
+    <!-- Projets web / Développement -->
+    <h2 class="projects-subtitle">Projets web / Développement</h2>
+
+    <div class="projects-grid">
+      <!-- Projet 1 -->
+      <article class="project-card">
+        <div class="project-tag">Projet 1 • Site de présentation de 10 films</div>
+        <h3>WordPress – Divi 5 – ACF</h3>
+        <p>
+          Site vitrine de 10 films réalisé avec WordPress et le thème builder Divi&nbsp;5. Contenus gérés via des champs personnalisés ACF (titres, affiches, synopsis) et affichage dynamique des pages films.
+        </p>
+        <div class="project-meta">
+          Stack : WordPress, Divi&nbsp;5, ACF
+        </div>
+        <div class="project-links">
+          <a href="https://sosa.leslieewane.ca/" target="_blank" rel="noopener noreferrer">Voir en ligne</a>
+        </div>
+      </article>
+
+      <!-- Projet 2 -->
+      <article class="project-card">
+        <div class="project-tag">Projet 2 • Mini boutique en ligne</div>
+        <h3>Osullivan Store</h3>
+        <p>
+          Mini application e‑commerce réalisée avec React et une fausse API produits. L’utilisateur doit d’abord se connecter (login protégé) pour accéder au catalogue, puis peut parcourir les produits, filtrer par catégorie et ajouter/retirer des articles du panier.
+        </p>
+        <div class="project-meta">
+          Stack : React, React Router, Context API, SCSS, FakeStore API
+        </div>
+        <div class="project-links">
+          <a href="https://osullivan-store.vercel.app/" target="_blank" rel="noopener noreferrer">Voir en ligne</a><br>
+          <a href="https://github.com/sosa2637/Osullivan-store" target="_blank" rel="noopener noreferrer">Code source</a>
+        </div>
+      </article>
+
+      <!-- Projet 3 -->
+      <article class="project-card">
+        <div class="project-tag">Projet 3 • Site vitrine photographe</div>
+        <h3>DM Photographie</h3>
+        <p>
+          Site vitrine responsive pour un photographe, avec pages services/forfaits, témoignages et portfolio d’images. Galerie avec lightbox JavaScript et formulaire de contact relié à une API d’envoi d’e‑mail (Resend).
+        </p>
+        <div class="project-meta">
+          Stack : HTML, CSS, JavaScript, API Resend
+        </div>
+        <div class="project-links">
+          <a href="https://www.leslieewane.ca/" target="_blank" rel="noopener noreferrer">Voir en ligne</a><br>
+          <a href="https://github.com/sosa2637/projet-photographe" target="_blank" rel="noopener noreferrer">Code source</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Projets design -->
+    <h2 class="projects-subtitle">Projets design (UI / graphisme)</h2>
+
+    <div class="projects-grid">
+      <!-- Projet 4 -->
+      <article class="project-card">
+        <div class="project-tag">Projet 4 • Montage visuel</div>
+        <h3>Montage promotionnel</h3>
+        <p>
+          Création d’un montage visuel pour une campagne promotionnelle, avec travail sur la composition, la colorimétrie et la typographie pour mettre en valeur le message principal.
+        </p>
+        <div class="project-meta">
+          Outils : Adobe Illustrator
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener noreferrer">Voir les captures</a>
+        </div>
+      </article>
+
+      <!-- Projet 5 -->
+      <article class="project-card">
+        <div class="project-tag">Projet 5 • Maquette UI</div>
+        <h3>Maquette de page d’accueil</h3>
+        <p>
+          Maquette de page d’accueil réalisée en mode desktop/mobile, avec grille responsive, hiérarchie typographique et mise en avant de la section héros et des appels à l’action.
+        </p>
+        <div class="project-meta">
+          Outils : Adobe XD
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener noreferrer">Voir les captures</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <p>© <span id="year"></span> Leslie Essong Ewane. Tous droits réservés.</p>
+    <p>Besoin de plus de détails ? <a href="contact.html" style="color:#dfeeff;">Écrivez-moi</a>.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
