@@ -1,130 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV – Leslie Essong Ewane</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leslie Essong Ewane – Développeur web</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="cv.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
 <header class="site-header">
   <div class="header-inner wrapper">
+
     <a href="index.html" class="logo">
       <span class="logo-mark">LEE</span>
-      <span class="logo-text">Développeur web</span>
+      <span class="logo-text">Développeur web junior</span>
     </a>
 
-    <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <!-- ======= HAMBURGER ======= -->
+    <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
-    <nav class="nav" id="nav" aria-label="Navigation principale">
-      <a href="index.html" class="nav-link">Accueil</a>
+    <!-- ======= NAVIGATION ======= -->
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-link nav-link--active">Accueil</a>
       <a href="about.html" class="nav-link">À propos</a>
       <a href="projects.html" class="nav-link">Projets</a>
-      <a href="cv.html" class="nav-link nav-link--active">CV</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
+
   </div>
 </header>
 
-<main class="cv-container" role="main">
-    <header>
-        <h1>Leslie Essong Ewane</h1>
-        <p class="info">
-            70 rue d’Artois, Québec, QC G1C 3C7 <br>
-            418-572-0184 • <a href="mailto:essongewane@gmail.com">contact@leslieewane.ca</a><br>
-            Portfolio : <a href="https://portfolio.leslieewane.ca" target="_blank">Mon portfolio</a><br>
-            LinkedIn : <a href="www.linkedin.com/in/leslie26" target="_blank">linkedin de leslieewane</a>
+<div class="nav-overlay"></div>
+
+<main class="wrapper">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-kicker">Salut, je suis</p>
+        <h1 class="hero-title">Leslie Essong Ewane</h1>
+        <p class="hero-subtitle">
+          Développeur web junior basé à beauport-québec. J’aime transformer des idées
+          en interfaces claires, modernes et orientées utilisateur, en
+          m’appuyant sur des bases solides en HTML, CSS et JavaScript.
         </p>
-    </header>
 
-    <section>
-        <h2>Profil</h2>
-        <p>Développeur web junior orienté front-end, passionné par la conception d’interfaces modernes et fonctionnelles. Je suis motivé, curieux et impliqué, cherchant à contribuer à des projets web de qualité.</p>
-    </section>
+        <div class="hero-buttons">
+          <a href="projects.html" class="btn">Voir mes projets</a>
+          <a href="cv.html" class="btn">Voir mon CV</a>
+        </div>
 
-    <section>
-        <h2>Compétences techniques</h2>
-        <ul class="list">
-            <li><strong>Front-end :</strong> HTML5, CSS, JavaScript, ReactJS</li>
-            <li><strong>Back-end :</strong> PHP, MySQL, API REST</li>
-            <li><strong>Outils :</strong> Git, VS Code, WordPress</li>
-            <li><strong>Design :</strong> Adobe XD, Photoshop, Illustrator, Figma</li>
-        </ul>
-    </section>
+        <div class="hero-meta">
+          <span>📍 Beauport, Québec</span>
+          <span>💼 Ouvert aux opportunités</span>
+        </div>
+      </div>
 
-    <section>
-        <h2>Projets académiques</h2>
-        <ul class="list">
-            <li>Conception d’un site e-commerce avec MySQL</li>
-            <li>Blog dynamique en PHP & API REST</li>
-            <li>Page web en Bootstrap + Design sur Figma</li>
-            <li>Projet final ReactJS : affichage, tri, filtrage et panier</li>
-        </ul>
-    </section>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <img src="image/profil.jpg" alt="Portrait de Leslie Essong Ewane" />
+        </div>
+      </div>
+    </div>
 
-    <section>
-        <h2>Formation</h2>
-        <ul class="list">
-            <li>AEC en Développement Web — Collège O’Sullivan (2025)</li>
-            <li>Licence 2 en Droit Fondamental — Université de Yaoundé II (2022)</li>
-        </ul>
-    </section>
+    <div class="home-highlights">
+      <div class="highlight-card">
+        <strong>Front-end</strong><br />
+        Maquettage, intégration responsive et micro-interactions pour des
+        interfaces agréables à utiliser.
+      </div>
+      <div class="highlight-card">
+        <strong>Projets concrets</strong><br />
+        Plusieurs projets d’applications, de sites vitrines et de dashboards
+        réalisés en autonomie.
+      </div>
+      <div class="highlight-card">
+        <strong>Curiosité</strong><br />
+        Veille constante et envie de progresser sur React, Node.js et les
+        bonnes pratiques UX.
+      </div>
+    </div>
+  </section>
 
-    <section>
-        <h2>Expériences</h2>
-        <h3>Monteur de chapiteau — Centre Vidéotron (TalentWorld), Québec — 2025</h3>
-        <ul class="list">
-            <li>Installation et démontage de structures événementielles</li>
-            <li>Travail d’équipe et respect des règles de sécurité</li>
-        </ul>
-
-        <h3>Préparateur de commandes — OK Foods, Douala — mars à juin 2023</h3>
-        <ul class="list">
-            <li>Préparation et expédition des commandes</li>
-            <li>Utilisation de scanners et tri logistique</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Certifications</h2>
-        <ul class="list">
-            <li>PDSB — Principes de déplacement sécuritaire des bénéficiaires</li>
-            <li>RCR — Réanimation cardiorespiratoire</li>
-            <li>BSP — Certificat d’agent de sécurité</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Qualités personnelles</h2>
-        <ul class="list">
-            <li>Apprentissage rapide, rigueur et organisation</li>
-            <li>Bon esprit d’équipe et adaptabilité</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Loisirs</h2>
-        <ul class="list">
-            <li>Voyage</li>
-            <li>Lecture</li>
-            <li>Sport</li>
-        </ul>
-    </section>
 </main>
 
 <footer class="site-footer">
   <div class="wrapper footer-inner">
     <p>© <span id="year"></span> Leslie Essong Ewane. Tous droits réservés.</p>
-    <p>Envie d’échanger ? <a href="contact.html" style="color:#dfeeff;">Contactez-moi</a>.</p>
+    <p>Portfolio développé en HTML &amp; CSS.</p>
   </div>
 </footer>
 
