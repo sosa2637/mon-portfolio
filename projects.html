@@ -15,10 +15,15 @@
 <header class="site-header">
   <div class="header-inner wrapper">
     <a href="index.html" class="logo">
-      <span class="logo-mark">LE</span>
+      <span class="logo-mark">LEE</span>
       <span class="logo-text">Développeur web</span>
     </a>
-    <nav class="nav">
+
+    <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" aria-label="Navigation principale">
       <a href="index.html" class="nav-link">Accueil</a>
       <a href="about.html" class="nav-link">À propos</a>
       <a href="projects.html" class="nav-link nav-link--active">Projets</a>
@@ -27,101 +32,114 @@
   </div>
 </header>
 
+<div class="nav-overlay"></div>
+
 <main class="wrapper">
+
   <section style="padding-block: 4.5rem 3.5rem;">
     <h1 class="section-title">Mes projets</h1>
 
     <div class="section-intro">
-      Une sélection de projets de développement web et de design (UI) réalisés pour mettre en pratique mes compétences en front‑end, intégration responsive et maquettage. Chaque projet peut être exploré en détail.
+      Une sélection de projets de développement web et de design (UI).
     </div>
 
-    <!-- Projets web / Développement -->
+    <!-- =============================
+         PROJETS WEB
+         ============================= -->
+
     <h2 class="projects-subtitle">Projets web / Développement</h2>
 
     <div class="projects-grid">
-      <!-- Projet 1 -->
+
       <article class="project-card">
-        <div class="project-tag">Projet 1 • Site de présentation de 10 films</div>
+        <div class="project-tag">Projet 1 • Site de présentation de films</div>
         <h3>WordPress – Divi 5 – ACF</h3>
-        <p>
-          Site vitrine de 10 films réalisé avec WordPress et le thème builder Divi&nbsp;5. Contenus gérés via des champs personnalisés ACF (titres, affiches, synopsis) et affichage dynamique des pages films.
-        </p>
-        <div class="project-meta">
-          Stack : WordPress, Divi&nbsp;5, ACF
-        </div>
+        <p>Site vitrine de 10 films réalisé avec WordPress et Divi 5. Contenus gérés via ACF.</p>
+        <div class="project-meta">Stack : WordPress, Divi 5, ACF</div>
         <div class="project-links">
-          <a href="https://sosa.leslieewane.ca/" target="_blank" rel="noopener noreferrer">Voir en ligne</a>
+          <a href="https://sosa.leslieewane.ca/" target="_blank" rel="noopener">Voir en ligne</a>
         </div>
       </article>
 
-      <!-- Projet 2 -->
       <article class="project-card">
         <div class="project-tag">Projet 2 • Mini boutique en ligne</div>
         <h3>Osullivan Store</h3>
-        <p>
-          Mini application e‑commerce réalisée avec React et une fausse API produits. L’utilisateur doit d’abord se connecter (login protégé) pour accéder au catalogue, puis peut parcourir les produits, filtrer par catégorie et ajouter/retirer des articles du panier.
-        </p>
-        <div class="project-meta">
-          Stack : React, React Router, Context API, SCSS, FakeStore API
-        </div>
+        <p>Application e-commerce réalisée en React, avec login, filtres et panier.</p>
+        <div class="project-meta">Stack : React, React Router, SCSS</div>
         <div class="project-links">
-          <a href="https://osullivan-store.vercel.app/" target="_blank" rel="noopener noreferrer">Voir en ligne</a><br>
-          <a href="https://github.com/sosa2637/Osullivan-store" target="_blank" rel="noopener noreferrer">Code source</a>
+          <a href="https://osullivan-store.vercel.app/" target="_blank" rel="noopener">Voir en ligne</a>
+          <a href="https://github.com/sosa2637/Osullivan-store" target="_blank" rel="noopener">Code source</a>
         </div>
       </article>
 
-      <!-- Projet 3 -->
       <article class="project-card">
         <div class="project-tag">Projet 3 • Site vitrine photographe</div>
         <h3>DM Photographie</h3>
-        <p>
-          Site vitrine responsive pour un photographe, avec pages services/forfaits, témoignages et portfolio d’images. Galerie avec lightbox JavaScript et formulaire de contact relié à une API d’envoi d’e‑mail (Resend).
-        </p>
-        <div class="project-meta">
-          Stack : HTML, CSS, JavaScript, API Resend
-        </div>
+        <p>Site vitrine responsive avec galerie et formulaire de contact via API.</p>
+        <div class="project-meta">Stack : HTML, CSS, JavaScript</div>
         <div class="project-links">
-          <a href="https://www.leslieewane.ca/" target="_blank" rel="noopener noreferrer">Voir en ligne</a><br>
-          <a href="https://github.com/sosa2637/projet-photographe" target="_blank" rel="noopener noreferrer">Code source</a>
+          <a href="https://www.leslieewane.ca/" target="_blank" rel="noopener">Voir en ligne</a>
         </div>
       </article>
+
     </div>
 
-    <!-- Projets design -->
+    <!-- =============================
+         PROJETS DESIGN / UI
+         ============================= -->
+
     <h2 class="projects-subtitle">Projets design (UI / graphisme)</h2>
 
     <div class="projects-grid">
-      <!-- Projet 4 -->
+
+      <!-- Illustrator -->
       <article class="project-card">
-        <div class="project-tag">Projet 4 • Montage visuel</div>
+        <div class="project-tag">Projet 4 • Design graphique</div>
         <h3>Montage promotionnel</h3>
-        <p>
-          Création d’un montage visuel pour une campagne promotionnelle, avec travail sur la composition, la colorimétrie et la typographie pour mettre en valeur le message principal.
-        </p>
-        <div class="project-meta">
-          Outils : Adobe Illustrator
-        </div>
+        <p>Création d’un visuel pour une campagne : colorimétrie, typographie et composition.</p>
+        <div class="project-meta">Outils : Adobe Illustrator</div>
         <div class="project-links">
-          <a href="#" target="_blank" rel="noopener noreferrer">Voir les captures</a>
+          <a href="image/illustrator-1.png" class="lightbox-link" data-gallery="illustrator">
+            Voir les captures
+          </a>
+
+          <a href="image/illustrator-2.png" data-gallery="illustrator" hidden></a>
+          <a href="image/illustrator-3.png" data-gallery="illustrator" hidden></a>
+          <a href="image/illustrator-4.png" data-gallery="illustrator" hidden></a>
+          <a href="image/illustrator-5.png" data-gallery="illustrator" hidden></a>
+          <a href="image/illustrator-6.png" data-gallery="illustrator" hidden></a>
+          <a href="image/illustrator-7.png" data-gallery="illustrator" hidden></a>
+          <a href="image/illustrator-8.png" data-gallery="illustrator" hidden></a>
+          <a href="image/illustrator-9.png" data-gallery="illustrator" hidden></a>
+          <a href="image/illustrator-10.png" data-gallery="illustrator" hidden></a>
         </div>
       </article>
 
-      <!-- Projet 5 -->
+      <!-- Adobe XD -->
       <article class="project-card">
-        <div class="project-tag">Projet 5 • Maquette UI</div>
+        <div class="project-tag">Projet 5 • UI Design</div>
         <h3>Maquette de page d’accueil</h3>
-        <p>
-          Maquette de page d’accueil réalisée en mode desktop/mobile, avec grille responsive, hiérarchie typographique et mise en avant de la section héros et des appels à l’action.
-        </p>
-        <div class="project-meta">
-          Outils : Adobe XD
-        </div>
+        <p>Maquette desktop/mobile avec hiérarchie typographique et CTA.</p>
+        <div class="project-meta">Outils : Adobe XD</div>
         <div class="project-links">
-          <a href="#" target="_blank" rel="noopener noreferrer">Voir les captures</a>
+          <a href="image/xd-0.png" class="lightbox-link" data-gallery="xd">
+            Voir les captures
+          </a>
+
+          <a href="image/xd-01.png" data-gallery="xd" hidden></a>
+          <a href="image/xd-02.png" data-gallery="xd" hidden></a>
+          <a href="image/xd-03.png" data-gallery="xd" hidden></a>
+          <a href="image/xd-1.png" data-gallery="xd" hidden></a>
+          <a href="image/xd-2.png" data-gallery="xd" hidden></a>
+          <a href="image/xd-3.png" data-gallery="xd" hidden></a>
+          <a href="image/xd-4.png" data-gallery="xd" hidden></a>
+          <a href="image/xd-5.png" data-gallery="xd" hidden></a>
         </div>
       </article>
+
     </div>
   </section>
+
 </main>
 
 <footer class="site-footer">
@@ -130,6 +148,16 @@
     <p>Besoin de plus de détails ? <a href="contact.html" style="color:#dfeeff;">Écrivez-moi</a>.</p>
   </div>
 </footer>
+
+<!-- =============================
+     LIGHTBOX GLOBALE
+     ============================= -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Fermer">&times;</button>
+  <button class="lightbox-prev" aria-label="Image précédente">&#10094;</button>
+  <img class="lightbox-img" src="" alt="">
+  <button class="lightbox-next" aria-label="Image suivante">&#10095;</button>
+</div>
 
 <script src="script.js"></script>
 </body>
