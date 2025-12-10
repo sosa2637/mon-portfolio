@@ -1,4 +1,4 @@
-/* ========== RESET SIMPLE ========== */
+/* ========== RESET SIMPLE ========== */ 
 *,
 *::before,
 *::after {
@@ -61,7 +61,7 @@ main {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 50;
   backdrop-filter: blur(18px);
   background: linear-gradient(to bottom, rgba(4, 10, 18, 0.88), rgba(4, 10, 18, 0.6));
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -105,6 +105,8 @@ main {
   opacity: 0.9;
   color: #f7fbff;
 }
+
+/* ===== NAV DESKTOP ===== */
 
 .nav {
   display: flex;
@@ -178,7 +180,7 @@ main {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
-/* ========== HERO ACCUEIL ========== */
+/* ========== HERO ========== */
 
 .hero {
   padding-block: 4.5rem 3.5rem;
@@ -298,26 +300,20 @@ main {
   margin-top: 0.4rem;
 }
 
-/* projets */
+/* PROJETS */
+
 .projects-subtitle {
   font-family: "Playfair Display", serif;
   font-size: 1.3rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin: 3rem 0 1.5rem; /* haut / côtés / bas */
+  margin: 3rem 0 1.5rem;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-}
-
-.projects-subtitle + .projects-grid {
-  margin-bottom: 2rem;
-}
-.projects-grid + .projects-subtitle {
-  margin-top: 3.5rem;
 }
 
 .project-card {
@@ -430,8 +426,6 @@ main {
   gap: 1rem;
 }
 
-/* ========== RESPONSIVE ========== */
-
 @media (max-width: 900px) {
   .hero-inner {
     flex-direction: column-reverse;
@@ -470,3 +464,314 @@ main {
     padding-block: 3.3rem 3rem;
   }
 }
+
+/* ======================================================
+   MENU MOBILE PLEIN ÉCRAN + ANIMATION DES LIENS
+   ====================================================== */
+
+.hamburger {
+  width: 36px;
+  height: 26px;
+  display: none;
+  -webkit-tap-highlight-color: transparent;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 300;
+}
+
+.hamburger span {
+  display: block;
+  height: 3.5px;
+  width: 100%;
+  border-radius: 8px;
+  background: #f7fbff;
+  transition: transform 0.28s cubic-bezier(.2,.9,.2,1), opacity 0.2s ease;
+}
+
+/* animation hamburger -> X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* ========== OVERLAY ========== */
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 12, 0.7);
+  backdrop-filter: blur(1px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 200;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ========== MENU MOBILE (PLEIN ÉCRAN) ========== */
+
+@media (max-width: 840px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2.4rem;
+    padding-top: 5rem;
+
+    background: rgba(5, 12, 20, 0.97);
+    backdrop-filter: blur(14px);
+
+    transform: translateY(-100%);
+    transition: transform 0.55s cubic-bezier(.23,1,.32,1);
+
+    z-index: 250;
+  }
+
+  .nav.active {
+    transform: translateY(0);
+  }
+
+  /* ANIMATION DES LIENS */
+  .nav a {
+    opacity: 0;
+    transform: translateY(22px);
+    font-size: 1.55rem;
+    letter-spacing: 0.16em;
+    color: #f7fbff;
+    text-align: center;
+
+    transition: 
+      opacity 0.45s ease,
+      transform 0.45s ease;
+  }
+
+  .nav.active a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav.active a:nth-child(1) { transition-delay: 0.12s; }
+  .nav.active a:nth-child(2) { transition-delay: 0.20s; }
+  .nav.active a:nth-child(3) { transition-delay: 0.28s; }
+  .nav.active a:nth-child(4) { transition-delay: 0.36s; }
+}
+
+/* Desktop reset */
+@media (min-width: 841px) {
+  .nav {
+    display: flex !important;
+    position: static;
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+}
+/* ======================================================
+   AJOUT – SURLIGNAGE LIEN ACTIF (MENU MOBILE)
+   ====================================================== */
+@media (max-width: 840px) {
+
+  .nav a.nav-link--active {
+    opacity: 1;
+  }
+
+  .nav a.nav-link--active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -14px;
+    width: 42px;
+    height: 3px;
+    background: linear-gradient(90deg, #f7fbff, #9fd3ff);
+    border-radius: 999px;
+    transform: translateX(-50%);
+  }
+}
+/* ======================================================
+   AJOUT – MENU MOBILE : TEXTE NET & PRO
+   ====================================================== */
+@media (max-width: 840px) {
+
+  .nav a {
+    opacity: 1;                /* ← enlève l’effet fade moche */
+    filter: none;              /* ← aucun flou */
+    transform: none;           /* ← pas de flottement */
+  }
+
+  .nav {
+    text-rendering: optimizeLegibility;
+  }
+}
+/* AJOUT – CROIX MENU PLUS VISIBLE */
+@media (max-width: 840px) {
+  .hamburger.active span {
+    background: #ffffff;
+  }
+}
+/* ======================================================
+   AJOUT – LIEN ACTIF VISIBLE (CLIC MOBILE)
+   ====================================================== */
+@media (max-width: 840px) {
+
+  .nav a {
+    position: relative;
+  }
+
+  .nav a.nav-link--active {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .nav a.nav-link--active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -16px;
+    width: 48px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 999px;
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
+/* ======================================================
+   AJOUT – OPTION A : MENU MOBILE STABLE & LIENS CLIQUABLES
+   (NE REMPLACE RIEN, SURCHARGE JUSTE POUR CORRIGER)
+   ====================================================== */
+
+@media (max-width: 840px) {
+
+  /* Liens toujours cliquables */
+  .nav a {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Overlay ne bloque jamais les clics sur le menu */
+  .nav-overlay {
+    pointer-events: none;
+  }
+
+  .nav-overlay.active {
+    pointer-events: none; /* <-- CORRECTION ICI (au lieu de auto) */
+  }
+
+  /* On désactive le blur derrière le texte du menu
+     pour éviter le rendu flou/“sale” */
+  .nav {
+    backdrop-filter: none;
+  }
+
+  /* Feedback tactile léger */
+  .nav a:active {
+    transform: scale(0.96);
+  }
+}
+
+/* AJOUT – scroll-lock (sécurité si jamais déplacé dans le fichier) */
+body.menu-open {
+  overflow: hidden;
+}
+/* ===============================
+   LIGHTBOX GALLERY PRO
+   =============================== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  backdrop-filter: blur(8px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 88%;
+  max-height: 88%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+  animation: lightboxFade 0.35s ease;
+}
+
+@keyframes lightboxFade {
+  from { opacity: 0; transform: scale(.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* boutons navigation */
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.lightbox-close { top: 2rem; right: 2rem; }
+.lightbox-prev { left: 2rem; }
+.lightbox-next { right: 2rem; }
+
+.lightbox-prev,
+.lightbox-next {
+  font-size: 2.6rem;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255,255,255,0.28);
+}
+
+@media (max-width: 720px) {
+  .lightbox-prev { left: 1rem; }
+  .lightbox-next { right: 1rem; }
+  .lightbox-close { top: 1rem; right: 1rem; }
+}
+
